@@ -24,7 +24,6 @@ const About = () => {
 
 	const [listItems, setListItems] = useState([])
 	const [listItems2, setListItems2] = useState([])
-	const [listItems3, setListItems3] = useState([])
 	var sampleText = [
 		"Certificate of classification of contractors",
 		"License Civil Defense in Saudi Arabia",
@@ -63,13 +62,6 @@ const About = () => {
 		setListItems2(textBlock);
 		if (listItems2 === textBlock) {
 			setListItems2("")
-		}
-	};
-
-	const handleClick3 = () => {
-		setListItems3(jsonData);
-		if (listItems === jsonData) {
-			setListItems3([])
 		}
 	};
 
@@ -125,11 +117,6 @@ const About = () => {
 									<li key={index}>{item}</li>
 								))}
 							</ul>
-						</p>
-						<p style={{ fontSize: 18 }}>
-							{listItems3.map((item, index) => (
-								<p key={index}>{item.name}</p>
-							))}
 						</p>
 					</div>
 				</div>
