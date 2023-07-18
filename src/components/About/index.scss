@@ -1,0 +1,150 @@
+.stage-cube-cont {
+	width: 50%;
+	height: 100%;
+	top: 0;
+	padding-top: 18%;
+	margin-left: 0;
+	position: absolute;
+	right: 0;
+	overflow: hidden;
+}
+
+.cubespinner {
+	animation-name: spincube;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-duration: 12s;
+	transform-style: preserve-3d;
+	transform-origin: 100px 100px 0;
+	margin-left: calc(50% - 100px);
+
+	div {
+		position: absolute;
+		width: 200px;
+		height: 200px;
+		border: 1px solid #ccc;
+		background: rgba(255, 255, 255, 0.4);
+		text-align: center;
+		font-size: 100px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		box-shadow: 0 0 20px 0px lightyellow;
+	}
+
+	.face1 {
+		transform: translateZ(100px);
+		color: #dd0031;
+	}
+
+	.face2 {
+		transform: rotateY(90deg) translateZ(100px);
+		color: #f06529;
+	}
+
+	.face3 {
+		transform: rotateY(90deg) rotateX(90deg) translateZ(100px);
+		color: #28a4d9;
+	}
+
+	.face4 {
+		transform: rotateY(180deg) rotateZ(90deg) translateZ(100px);
+		color: #5ed4f4;
+	}
+
+	.face5 {
+		transform: rotateY(-90deg) rotateZ(90deg) translateZ(100px);
+		color: #efd81d;
+	}
+
+	.face6 {
+		transform: rotateX(-90deg) translateZ(100px);
+		color: #ec4d28;
+	}
+}
+
+@keyframes spincube {
+
+	from,
+	to {
+		transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+	}
+
+	16% {
+		transform: rotateY(-90deg) rotateZ(90deg);
+	}
+
+	33% {
+		transform: rotateY(-90deg) rotateX(90deg);
+	}
+
+	50% {
+		transform: rotateY(-180deg) rotateZ(90deg);
+	}
+
+	66% {
+		transform: rotateY(-270deg) rotateX(90deg);
+	}
+
+	83% {
+		transform: rotateX(90deg);
+	}
+}
+
+button {
+	background-color: transparent;
+	border: 1px solid #FFCB74;
+	color: white;
+	padding: 10px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	animation: fadeIn 1s 1s backwards;
+	transition: all 0.5s;
+}
+
+button:hover {
+	background-color: #FFCB74;
+	color: #333;
+}
+
+button span {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: 0.5s;
+}
+
+button span:after {
+	content: '\00bb';
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	right: -20px;
+	transition: 0.5s;
+}
+
+button:hover span {
+	padding-right: 25px;
+}
+
+button:hover span:after {
+	opacity: 1;
+	right: 0;
+}
+
+.animated-p {
+	animation: fadeIn 1s 1s backwards;
+}
+
+.base-logo {
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	width: 50%;
+	padding-left: 900px;
+	animation: fadeIn 1s 1s backwards;
+}
