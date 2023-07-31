@@ -92,7 +92,7 @@ const About = () => {
 							experienced and specialized companies in this field.
 						</p>
 						<p align="LEFT" style={{ fontSize: 18 }}>
-							We're different that other companies in the fact that we're complete in design, supply, installation and supervision according to
+							We're different from other companies in the fact that we're complete in design, supply, installation and supervision according to
 							international and local standards.
 						</p>
 						<p style={{ fontSize: 18 }}>
